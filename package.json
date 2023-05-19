@@ -1,0 +1,24 @@
+{
+  "name": "potercoin",
+  "version": "1.0.0",
+  "description": "Poter dependencies",
+  "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^8.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/potercoin/potercoin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/potercoin/potercoin/issues"
+  },
+  "homepage": "https://github.com/potercoin/potercoin#readme"
+}
