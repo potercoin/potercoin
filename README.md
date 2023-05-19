@@ -1,6 +1,6 @@
-# Fission Site Source Repo
+# Poter Site Source Repo
 
-This is the source for the [fission.io](https://fission.io)
+This is the source for the [potercoin.ink](https://potercoin.ink)
 website.
 
 ## Repo organization
