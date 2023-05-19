@@ -8,7 +8,7 @@ description: >
 
 ## What is Poter?
 
-[potercoin](https://potercoin.ink)  [@potercoin](https://twitter.com/potercoin)
+[poter](https://potercoin.ink)  [@poter](https://twitter.com/potercoin)
 
 Fission is a fast, open source serverless framework for Kubernetes with a focus on developer productivity and high performance.
 
