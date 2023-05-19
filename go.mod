@@ -1,4 +1,4 @@
-module github.com/fission/fission.io
+module github.com/potercoin/potercoin
 
 go 1.18
 
