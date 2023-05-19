@@ -1,105 +1,175 @@
 ---
 title: "Poter Versions"
 linkTitle: "Versions"
-description: "Runtime for different languages"
+description: "Poter is a Full-featured Download Manager."
 images: ["images/og-image-fission.png"]
 ---
 
-<div class="container push-down mb-5">
-  <div class="row mb-2">
-    <div class="col-12">
-      <h1 class="font-weight-bold">Versions</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="form-group">
-        <h5><label class="d-block" for="search">Search</label></h5>
-        <input type="search" placeholder="Search query" class="form-control" 
-          id="search" oninput="updateEnvItems()">
-      </div>
-    </div>
-    <div class="col">
-      <div class="form-group">
-        <h5><label class="d-block" for="filter-lang">Filter by language</label></h5>
-        <select class="form-control" id="filter-lang" onchange="updateEnvItems()">
-          <option value="" selected disabled>Loading...</option>
-        </select>
-      </div>
-    </div>
-  </div>
+<div class="hero -mt-5 pb-0" style="min-height: 80vh">
+  <div class="container">
+    <div class="row justify-content-center align-items-center text-center">
+      <div class="col-12 hero-section-mobile">
+        <h1 class="hero-title">Poter Support</h1>
+        <h3 class="pb-4">Companies offering commercial support for poter</h3>
 
-  <div class="row" id="env-list"></div>
-</div>
-
-<script type="text/javascript">
-  const envs = {{< readfile file="/static/data/environments.json" >}};
-
-  let languageOptions = [`<option value="">All</option>`].concat([...new Set(envs.map(env => env.name))]);
-  languageOptions = languageOptions.map((option, index) => index === 0 ? option : 
-    `<option value="${option}">${option}</option>`)
-  document.getElementById("filter-lang").innerHTML = languageOptions.join(' ');
-
-  function getBadge(imageName) {
-    return `<h4 class="d-inline-block mx-1 my-0">
-      <a href="https://hub.docker.com/r/fission/${imageName}" class="badge badge-light text-wrap" target="_blank">
-        ${imageName}
-      </a>
-    </h4>`
-  }
-
-  function updateEnvItems() {
-    const searchQuery = document.getElementById("search").value.trim().toLowerCase();
-    const selectedLanguageFilter = document.getElementById("filter-lang").value;
-
-    const filteredEnvs = selectedLanguageFilter ? 
-      envs.filter(env => env.name === selectedLanguageFilter) : envs;
-
-    const envItems = filteredEnvs.map(env => {
-      const filteredImages = searchQuery ? 
-        env.images.filter(image => (image.main && image.main.toLowerCase().includes(searchQuery)) ||
-          (image.builder && image.builder.toLowerCase().includes(searchQuery))) : env.images;
-
-      const images = filteredImages.map(image => {
-        if (image.main && image.builder) {
-          return `<div class="d-flex my-2 align-items-center">
-            <div class="text-right col p-0">${getBadge(image.main)}</div>
-            <span class="fa fa-exchange-alt text-center"></span>
-            <div class="text-left col p-0">${getBadge(image.builder)}</div>
-          </div>`
-        } else {
-          return `<div class="text-center m-2">${getBadge(image.main || image.builder)}</div>`;
-        }
-      });
-
-      return `<div class="col-lg-6 col-12 my-2">
-        <div class="card h-100 p-0">
-          <div>
-            <div class="d-flex align-items-center p-1" style="background-color: #eee">
-              <div class="p-2" style="width: 80px; height: 50px">
-                <img class="h-100 w-100" src="${env.logo || "/images/lang-logo/misc-logo.svg"}" />
+        <div class="row mt-5">
+          <div class="col-12 py-2 col-md-6">
+            <a href="https://www.infracloud.io/fission-enterprise/">
+              <div class="text-white h-100 p-4 enterprise-company">
+                <div class="d-flex align-items-center" style="height: 100px">
+                  <img class="mx-auto mt-n3 p-3 mh-100 mw-100" src="/sponsors/infracloud.png" 
+                    alt="InfraCloud Technologies">
+                </div>
+                <h4>InfraCloud Technologies</h4>
+                <p>
+                  Adopt Poter in your production environment with help from experts. 
+                  24*7 support, work with maintainers directly and request custom features.
+                </p>
               </div>
-              <h4 class="my-0 ml-1 mr-2">${env.displayName || env.name}</h4>
-
-              <div style="flex: 1; justify-self: stretch; align-self: stretch"></div>
-
-              ${env.repo ? 
-                `<a class="mr-2" href="${env.repo}" target="_blank">
-                  <img src="/images/github-hp.png" width="30" />
-                </a>` 
-                : ''}
-            </div>
+            </a>
           </div>
-          <div class="${images.length > 0 ? "p-1" : "p-2"}">
-            ${images.length === 0 ? 
-              `No ${env.displayName || env.name} environments match the search filters` : images.join(' ')}
+          <div class="col-12 py-2 col-md-6">
+            <a href="https://github.com/potercoin/potercoin/pulls">
+              <div class="text-white h-100 p-4 enterprise-company">
+                <div class="d-flex align-items-center" style="height: 100px">
+                  <img class="mx-auto mt-n4 px-5 py-3 mh-100 mw-100" src="/images/fission-white-logo.png" alt="Poter">
+                </div>
+                <h4>Offering poter support?</h4>
+                <p>Add your company</p>
+              </div>
+            </a>
           </div>
         </div>
-      </div>`;
-    })
+      </div>
+    </div>
+  </div>
+</div>
 
-    document.getElementById("env-list").innerHTML = envItems.length > 0 ? 
-      envItems.join(' ') : `<div class="col-12">No environments available</div>`;
-  }
-  updateEnvItems();
-</script>
+<div class="body-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <br />
+        <br />
+        <h1 class="section-title">Join the Community</h1>
+        <br />
+
+        <div class="show-mobile">
+          <div class="community-cards">
+            <a href="/slack"
+              ><div class="card-shadow">
+                <div class="card-header-custom">
+                  <img
+                    src="/images/slack.svg"
+                    width="30px"
+                    class="img-card-header"
+                  />
+                  <p class="section-text-bold">Slack</p>
+                </div>
+                <p class="section-text">
+                  Join the Poter community to engage with the poter team,
+                  interact with other users, and contribute ideas and feedback.
+                </p>
+              </div></a
+            >
+
+            <a href="https://github.com/potercoin/potercoin"
+              ><div class="card-shadow">
+                <div class="card-header-custom">
+                  <img
+                    src="/images/github.svg"
+                    width="30px"
+                    class="img-card-header"
+                  />
+                  <p class="section-text-bold">GitHub</p>
+                </div>
+                <p class="section-text">
+                  Dive into the code and learn more about Poter. Submit PRs
+                  and collaborate with other like-minded contributors.
+                </p>
+              </div></a
+            >
+            <a href="https://twitter.com/potercoin"
+              ><div class="card-shadow twitter-card" style="margin-left: auto">
+                <div class="card-header-custom">
+                  <img
+                    src="/images/twitter.svg"
+                    width="36px"
+                    class="img-card-header"
+                  />
+                  <p class="section-text-bold">Twitter</p>
+                </div>
+                <p class="section-text">
+                  Follow us <b class="text-highlight">@poter</b> to stay up
+                  to date with Poter news.
+                </p>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8 community-cards show-desktop">
+        <div class="row">
+          <div class="col-lg-6">
+            <a href="/slack"
+              ><div class="card-shadow">
+                <div class="card-header-custom">
+                  <img
+                    src="/images/slack.svg"
+                    width="30px"
+                    class="img-card-header"
+                  />
+                  <p class="section-text-bold">Slack</p>
+                </div>
+                <p class="section-text">
+                  Join the Poter community to engage with the poter team,
+                  interact with other users, and contribute ideas and feedback.
+                </p>
+              </div></a
+            >
+          </div>
+          <div class="col-lg-6">
+            <a href="https://github.com/potercoin/potercoin"
+              ><div class="card-shadow">
+                <div class="card-header-custom">
+                  <img
+                    src="/images/github.svg"
+                    width="30px"
+                    class="img-card-header"
+                  />
+                  <p class="section-text-bold">GitHub</p>
+                </div>
+                <p class="section-text">
+                  Dive into the code and learn more about Poter. Submit PRs
+                  and collaborate with other like-minded contributors.
+                </p>
+              </div></a
+            >
+          </div>
+          <div class="col-lg-6">
+            <a href="https://twitter.com/potercoin"
+              ><div
+                class="card-shadow twitter-card-desktop"
+                style="margin-left: auto"
+              >
+                <div class="card-header-custom">
+                  <img
+                    src="/images/twitter.svg"
+                    width="36px"
+                    class="img-card-header"
+                  />
+                  <p class="section-text-bold">Twitter</p>
+                </div>
+                <p class="section-text">
+                  Follow us <b class="text-highlight">@poter</b> to stay up
+                  to date with Poter news.
+                </p>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
