@@ -1,5 +1,5 @@
 ---
-title: "Poter Blog"
+title: "Fission Blog"
 linkTitle: "Blog"
 type: "blog"
 ---
