@@ -49,7 +49,3 @@ Here is the guide to [Contributing to Fission](/docs/contributing/)
 
 
 --- 
-
-**_Authors:_**
-
-* [Harsh Thakur](https://twitter.com/harsh_thakur_1)  **|**  [Fission Contributor](https://github.com/RealHarshThakur)  **|**  Product Engineer - [InfraCloud Technologies](http://infracloud.io/)
