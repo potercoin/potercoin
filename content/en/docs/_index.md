@@ -10,13 +10,11 @@ description: >
 
 [poter](https://potercoin.ink)  [@poter](https://twitter.com/potercoin)
 
-Fission is a fast, open source serverless framework for Kubernetes with a focus on developer productivity and high performance.
+Poter is a full-featured download manager.
 
-Fission operates on _just the code_: Docker and Kubernetes are abstracted away under normal operation, though you can use both to extend Fission if you want to.
+Supports downloading various resources such as HTTP, FTP, BT, magnet links, IPFS, etc. It also supports batch downloading and automatic recognition of the content type being downloaded.
 
-Fission is extensible to any language; the core is written in Go, and language-specific parts are isolated in something called _environments_ (more below).
-Fission currently supports NodeJS, Python, Go, Java, Ruby, PHP, Bash, and any Linux executable, with more languages coming soon.
-
+Web3.0 storage returns data sovereignty back to individuals, while the trading platform promotes the valuable transmission of data.
 
 ## Join Us
 
