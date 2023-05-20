@@ -2,7 +2,7 @@
 
 There are many areas we can use contributions - ranging from code, documentation, feature proposals, issue triage, samples, and content creation. 
 
-First, please read the [code of conduct](https://github.com/fission/.github/blob/main/CODE_OF_CONDUCT.md). By participating, you're expected to uphold this code.
+First, please read the [code of conduct](https://github.com/potercoin/.github/blob/main/CODE_OF_CONDUCT.md). By participating, you're expected to uphold this code.
 
 ## Setup
 
