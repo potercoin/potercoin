@@ -2,93 +2,53 @@
 title = "Poter Roadmap"
 date = "2022-12-28T22:09:38+08:00"
 author = "Poter Office"
-description = "How to use ingress with TLS for Fission functions"
+description = "A Comprehensive Guide to Development Milestones"
 categories = ["Poter"]
 type = "blog"
 +++
 
-Some exciting updates to ingress host path, annotations, and TLS support.
-In Fission version 1.6.0, which was released on Friday 11 October 2019, new features arrived. This blogpost covers the exciting updates to ingress host path, annotations, and TLS support.
+# Abstract
 
-Fission previously supported ingress. However, it lacked support for TLS, host field, and ingress annotations. Now with version 1.6, all three are supported.
+The Poter project roadmap outlines the key milestones and development goals for the project, providing a clear vision for the future. This roadmap will guide the project team and community through the various stages of development, ensuring that the project remains focused on its core objectives and continues to deliver value to its users.
 
-In this blog post, we will cover all three of the new features. But first, let's talk about ingress some more.
 
-What is ingress?
-Ingress exposes HTTP and HTTPS routes from outside of the Kubernetes cluster to services located within the cluster.
+# Q2 2023: Project Inception and Initial Development
 
-An ingress object can be configured to give services externally-reachable URLs, load balance traffic, terminate TLS, and can offer name-based virtual hosting.
-An ingress controller is responsible for fulfilling the ingress object.
+- Establish the core project team, including developers, marketers, and operations personnel.
+- Develop the initial concept for the Poter token economy model.
+- Begin research and development on the Poter platform, focusing on user experience, security, and scalability.
 
-Check below for an example deployment.
+# Q3 2023: Token Presale and Platform Alpha Release
 
-```
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: sample-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /testpath
-        backend:
-          serviceName: ingress
-          servicePort: 80
-```
+- Conduct the Poter token presale, attracting early investors and supporters.
+- Release the alpha version of the Poter platform, allowing users to test its functionality and provide feedback.
+- Begin marketing efforts to raise awareness of the project and attract more users.
 
-To learn more about Kubernetes ingress check out [this link](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+# Q4 2023: Platform Beta Release and Community Building
 
-# Ingress host rule
+- Release the beta version of the Poter platform, incorporating user feedback and improving overall functionality.
+- Launch airdrop rewards and promotional campaigns to incentivize user participation and grow the community.
+- Establish partnerships with third-party data storage providers to expand storage capacity and improve security.
 
-You can enable ingress host rule by adding `--ingressrule` to your fission route command. 
-The format to use is `host=path`. You have to provide both the host and the endpoint path. 
-You can allow access from all hosts by providing an astrix as the host like:
+# Q1 2024: Platform Official Launch and Token Listing
 
-``` 
---ingressrule "*=/foobar" 
-```
+- Officially launch the Poter platform, offering a seamless and secure user experience.
+- List Poter tokens on major exchanges, increasing token liquidity and attracting more investors.
+- Continue marketing efforts to expand the user base and increase project awareness.
 
-You can also specify specific hosts by providing the name like:
+# Q2 2024: Platform Optimization and Expansion
 
-```
---ingressrule "example.com=/foobar"
-```
+- Continuously optimize the Poter platform, incorporating user feedback and addressing any issues.
+- Explore potential integrations with other Web3 technologies and platforms to expand the project's reach.
+- Develop additional features and services to enhance the user experience and provide more value to the community.
 
-Command example:
+# 2025 and Beyond: Long-term Growth and Sustainability
 
-```
-$ fission route create --name foobar --method GET \
-    --function nodejs --url "/foobar" --createingress --ingressrule "*=/foobar"
-```
+- Maintain a strong focus on user experience, security, and scalability, ensuring the Poter platform remains competitive in the market.
+- Continue to grow the community through marketing efforts, partnerships, and user incentives.
+- Adapt the Poter token economy model as needed to support the project's long-term growth and sustainability.
 
-# Ingress annotations
 
-You can now specify annotations to ingress when creating the HTTP trigger.
-To use ingress annotations, --ingressannotation needs to be added when creating or updating a fission route.
+# Conclusion
 
-If you, for example, want to disable TLS auto-redirect and enable regular expressions. You have to use the following command:
-
-```
-$ fission route create --name foo --url /foo --function foofn --createingress \
-    --ingressannotation "nginx.ingress.kubernetes.io/ssl-redirect=false" \
-    --ingressannotation "nginx.ingress.kubernetes.io/use-regex=true"
-```
-
-# Ingress TLS
-
-To enable this, you first have to create a secret that contains the TLS private key and the certificate.
-To enable ingress TLS, `--ingresstls` needs to be added when creating or updating a fission route.
-
-Command example:
-```
-$ fission route create --name foo --url /foo/{bar} --function foofn --createingress \
-    --ingressannotation "nginx.ingress.kubernetes.io/ssl-redirect=false" \
-    --ingressannotation "nginx.ingress.kubernetes.io/use-regex=true" \
-    --ingressrule "*=/foo/*" --ingresstls "foobartls"
-```
-
-Fission 1.6.0 added a lot of other cool features as well. Check out the [full changelog](https://github.com/fission/fission/blob/master/CHANGELOG.md#change-log) 
-or go directly to the [release page](/docs/releases/1.6.0/) here.
+The Poter project roadmap provides a clear path for the project's development, focusing on key milestones and objectives. By following this roadmap, the Poter project aims to deliver a secure, efficient, and user-friendly platform that drives the widespread adoption of Web3 technologies and provides value to its users and investors.

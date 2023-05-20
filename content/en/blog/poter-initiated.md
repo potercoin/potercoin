@@ -9,43 +9,19 @@ type: "blog"
 
 # Introduction
 
-Have you ever run into a scenario where you had to run untrusted code? Containers are great from a performance perspective but they have a considerable access to the kernel which can be exploited. In order to have the security of VMs and speed of containers, projects like [gVisor](https://github.com/google/gvisor) and [kata containers](https://github.com/kata-containers/kata-containers) have risen. In this post, we'll take a look at gVisor provides an application kernel for containers. It provides a runtime which can be used by Kubernetes. To understand more about how gVisor provides security, please go through [this](https://gvisor.dev/docs/architecture_guide/security/).
+Poter is a comprehensive downloader and trading platform that supports HTTP/HTTP2, FTP, BT, magnet, and ipfs resources downloads. It also provides editing, sharing, trading, and other functions. In addition, Poter integrates with the IPFS protocol to provide easy access to IPFS resources. It also builds its own web3 storage system, offering 5GB of permanent storage space for free to every user. Poter also features a unique forum, where users can freely communicate and share resources. Furthermore, Poter supports data encryption and NFT management to protect users' privacy and copyright.
 
-# Setup of cluster
+# Team Introduction
 
-If you're not using Google Kubernetes Engine, you can checkout the installation supported for your cluster [here](https://gvisor.dev/docs/user_guide/quick_start/kubernetes/).
-Google Kubernetes Engine provides the option of using gVisor out of the box. You need to have a GKE cluster running, after which you can add a new node pool on which gVisor is enabled. The new node pool should have :
-- Image type should have a container runtime of containerd
-- Machine type should be of standard class or higher
-
-You can now browse to the security section and enable sandbox with gVisor
-
-![gvisor-enable](/images/enable-gvisor.png)
+To achieve this project, we have assembled an excellent team including developers, designers, and marketers. We have rich experience and technical expertise, as well as innovative thinking and sharp market insights. We believe that through our efforts and wisdom, we can create a truly outstanding product and provide better experiences and services for users.
 
 
-# Deploying functions with gVisor
+# Project Planning and Design
 
-The plain installation of Fission is sufficient to utilize gVisor.
-
-To try out :
-- You can clone the [examples repository](https://github.com/fission/examples) 
-- Browse to the `samples/hello-py-spec/specs` directory and take a look at the spec of   environment within it.
-- Thanks to PodSpec support in Fission, any feature that's available in Kubernetes pods can be utilized by Fission too. In this case, all we need to do is add a `runtimeClassName` field which will instruct the function to use gVisor.
-
-<!-- ![gvisor-podspec](/images/gvisor-podspec.png) -->
-
-You can now proceed with the usual:
-
-```
-fission spec apply
-```
-
-Ta-da! Your functions are now utilsing gVisor. 
+At present, we have completed the initial planning and design of the project and are in the process of development and testing. We hope to receive support and feedback from users to help us continuously improve and refine the product. If you have any suggestions or opinions, please feel free to contact us at any time.
 
 # Conclusion
-Micro-vm technologies are on the rise as the use for running untrusted code has risen. Fission provides the flexibility to utilize such features out of the box as it is Kubernetes friendly.  We would love to hear how you utilize Fission. 
-
-Here is the guide to [Contributing to Fission](/docs/contributing/)
+The Poter project is full of passion and dreams. We look forward to your participation and support to create a better future together!
 
 
 --- 
