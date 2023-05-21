@@ -195,9 +195,9 @@ name = "Twitter"
 url = "https://twitter.com/potercoin"
 [[params.links.user]]
 desc = "Chat with other project users in #users"
-icon = "fab fa-slack"
-name = "Slack"
-url = "/slack"
+icon = "fab fa-telegram"
+name = "Telegram"
+url = "https://t.me/POTERCHATEN"
 [[params.links.user]]
 desc = "Development takes place here!"
 icon = "fab fa-facebook"
