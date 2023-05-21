@@ -224,6 +224,12 @@ ul {
     flex-direction: column;
 }
 
+.center-text-left {
+    display: flex;
+    /* align-items: ; */
+    justify-content: center;
+    flex-direction: column;
+}
 
 .card-shadow {
     padding: 35px 30px 30px 30px;
