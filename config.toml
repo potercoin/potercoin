@@ -144,7 +144,7 @@ heading = 'Poter Error Code'
 [params.whatsnew.button]
 hero_class = 'mid-2'
 text = 'Read More'
-url = '/docs/reference/error'
+url = '/docs/reference/error/'
 
 [[params.whatsnew]]
 badge = 'BLOG'
