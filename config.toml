@@ -89,7 +89,7 @@ id = ""
 
 [languages]
 [languages.en]
-description = "A full-featured download manager"
+description = "Poter is a powerful downloader that supports protocols such as HTTP, FTP, BitTorrent, and IPFS. Its flexible token economy empowers data value and supports data transactions including NFTs. The forum and reward board enable users to exchange information efficiently and effectively."
 languageName = "English"
 title = "Poter"
 # Weight used for sorting.

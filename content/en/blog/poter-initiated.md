@@ -1,5 +1,5 @@
 ---
-title: "Poter Initiated."
+title: "Poter Initiated"
 date: 2022-11-10T18:09:02+05:30
 author: "Poter Office"
 categories: ["News"]
