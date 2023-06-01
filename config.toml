@@ -121,7 +121,7 @@ twitterurl = 'https://twitter.com/potercoin'
 notoc = true
 
 # First one is picked as the Twitter card image if not set on page.
-images = ["images/og-image-fission.png"]
+images = ["images/whats-new-bg-3.jpg"]
 
 [params.social]
 github = 'potercoin'
