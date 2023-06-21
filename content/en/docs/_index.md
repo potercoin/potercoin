@@ -8,7 +8,7 @@ description: >
 
 ## What is Poter?
 
-[poter](https://potercoin.ink)  [@poter](https://twitter.com/potercoin)
+[poter](https://www.potercoin.ink)  [@poter](https://twitter.com/potercoin)
 
 Poter is a full-featured download manager.
 
@@ -18,5 +18,5 @@ Web3.0 storage returns data sovereignty back to individuals, while the trading p
 
 ## Join Us
 
-* [Join Slack](/slack)
-* Twitter: https://twitter.com/potercoin
+* [Telegram](https://t.me/POTERCHATEN)
+* [Twitter](https://twitter.com/potercoin)
